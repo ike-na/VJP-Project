@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="App">
+    <div className="About">
       <p>
         <span className="first-letter">M</span>e olemme joukko kalastuksesta ja ympäristöasioista kiinnostuneita vaikuttajia ja 
         haluamme lisätä tietoisuutta kalakantojen vähenemisestä ja edistää kestävää kalastusta. 
