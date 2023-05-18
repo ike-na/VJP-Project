@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import Video from './video.js'
-import About from './about.js'
-import Layout from "./layout.js";
-import ReactDOM from "react-dom/client";
+import Video from './pages/video.js'
+import About from './pages/about.js'
+import Layout from "./pages/layout.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
