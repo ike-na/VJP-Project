@@ -94,6 +94,11 @@ nav ul li a:hover::after{
 }
 
 
+.container {
+  display: flex;
+  align-items: center;
+}
+
 .tekstikenttä {
   resize: none;
   height: 70px;
@@ -112,18 +117,22 @@ nav ul li a:hover::after{
 }
 
 .nappi {
-  position: relative;
-  height: 70px;
+  height: 103px;
+  width: 100px;
   background: rgb(145, 145, 145);
   border: none;
   color: white;
   border-radius: 1em;
-  font-size:130%;
+  font-size: 150%;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
   cursor: pointer;
+  margin: 5px;
 }
 
 .nappi:hover,
 .nappi:focus-visible {
   color: rgb(19, 19, 19);
 }
+
 
