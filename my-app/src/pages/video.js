@@ -1,5 +1,5 @@
 import React from "react";
-import { CommentFrom } from "../components/Comment";
+import Comments from "../comments/comments.js";
 
 const Video = () => {
   return (
@@ -7,11 +7,12 @@ const Video = () => {
       <video width="750" height="500" controls>
         <source src="Liikakalastus.mp4" type="video/mp4" />
       </video>
-      <p>Miksi meidän tulisi välittää liikakkalstuksesta?</p>
+      <p>Miksi meidän tulisi välittää liikakalastuksesta?</p>
       <h2 className="comments">Comments</h2>
-      <section><CommentFrom>
-        
-        </CommentFrom></section>
+      <Comments
+        commentsUrl="http://localhost:3004/comments"
+        currentUserId="1"
+      />
     </div>
   );
 };
