@@ -2,6 +2,7 @@ import './App.css';
 import Home from './pages/home.js'
 import Video from './pages/video.js'
 import About from './pages/about.js'
+import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="video" element={<Video />} />
             <Route path="about" element={<About />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
     </div>
   );
