@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+// Handles the new comments written
 export function CommentForm({ onSubmit: onSubmit }) {
   const [comment, setComment] = useState("");
 

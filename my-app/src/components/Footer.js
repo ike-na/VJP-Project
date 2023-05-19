@@ -3,7 +3,7 @@ import email from "../images/email.png";
 import facebook from "../images/facebook.png"; 
 import linkedin from "../images/linkedin.png"; 
 
-
+// Adds the logos to the bottom of the page
 const Footer = () => {
   return (
     <div className="footer">

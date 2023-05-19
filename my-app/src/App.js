@@ -6,6 +6,7 @@ import About from './pages/about.js'
 import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
+// App() is the home page of the web page. It contains navigation bar to other pages
 function App() {
   return (
     <div className="App">

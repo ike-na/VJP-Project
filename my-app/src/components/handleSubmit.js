@@ -1,3 +1,5 @@
+
+// function to submit new comment with a timestamp
 const handleSubmit = (comment, comments, setComments) => {
     const timestamp = new Date().toLocaleString();
     const newComment = {
