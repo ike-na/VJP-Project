@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import thrashPic from "../images/delete.png"
 import { CommentForm } from "../components/Comment";
 
 const Video = () => {
@@ -38,23 +39,44 @@ const Video = () => {
       <video width="750" height="500" controls>
         <source src="Liikakalastus.mp4" type="video/mp4" />
       </video>
-      <p>Miksi meidän tulisi välittää liikakalastuksesta?</p>
+      <p>Liikakalastus paljastettuna - Kerro mielipiteesi ja tue kestävää kalastusta!</p>
       <h2 className="Comments-h2">Comments</h2>
       <section>
         <CommentForm onSubmit={handleSubmit} />
         {comments.length > 0 && (
-          <ul>
-            {comments.map((comment, index) => (
-              <li key={index}>
-                <span className="Comments">{comment.text}</span>
-                <span className="Votes">{comment.votes}</span>
-                <button className="Upvote-nappi" onClick={() => handleVote(index, 1)}>Upvote</button>
-                <button className="Downvote-nappi" onClick={() => handleVote(index, -1)}>Downvote</button>
-                <button className="Delete-nappi" onClick={() => handleCommentDelete(index)}>Delete</button>
-                <span className="Timestamp">{comment.timestamp}</span>
-              </li>
-            ))}
-          </ul>
+          
+          
+          
+          <div className="Comment-container">
+  <ul>
+    {comments.map((comment, index) => (
+      <li key={index}>
+        <div className="Comment-wrapper">
+          <span className="Comment-area">
+            {comment.text}
+            <button className="Delete-nappi" onClick={() => handleCommentDelete(index)}>
+            <img src={thrashPic} alt="Delete" /></button>
+            <div className="Timestamp">{comment.timestamp}</div>
+          </span>
+          <div className="Votes">{comment.votes}</div>
+        </div>
+        <div className="Comment-controls">
+          <button className="Upvote-nappi" onClick={() => handleVote(index, 1)}>Upvote</button>
+          <button className="Downvote-nappi" onClick={() => handleVote(index, -1)}>Downvote</button>
+          
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>
+
+
+
+
+        
+
+
+
         )}
       </section>
     </div>
