@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-export function CommentForm({ onCommentSubmit }) {
+export function CommentForm({ onSubmit: onSubmit }) {
   const [comment, setComment] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (comment.trim() !== "") {
-      onCommentSubmit(comment);
+      onSubmit(comment);
       setComment("");
     }
   };

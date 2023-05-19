@@ -39,14 +39,14 @@ const Video = () => {
         <source src="Liikakalastus.mp4" type="video/mp4" />
       </video>
       <p>Miksi meidän tulisi välittää liikakalastuksesta?</p>
-      <h2 className="Comments">Comments</h2>
+      <h2 className="Comments-h2">Comments</h2>
       <section>
         <CommentForm onSubmit={handleSubmit} />
         {comments.length > 0 && (
           <ul>
             {comments.map((comment, index) => (
               <li key={index}>
-                <span>{comment.text}</span>
+                <span className="Comments">{comment.text}</span>
                 <span className="Votes">{comment.votes}</span>
                 <button className="Upvote-nappi" onClick={() => handleVote(index, 1)}>Upvote</button>
                 <button className="Downvote-nappi" onClick={() => handleVote(index, -1)}>Downvote</button>
