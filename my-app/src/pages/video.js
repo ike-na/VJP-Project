@@ -43,40 +43,28 @@ const Video = () => {
       <h2 className="Comments-h2">Comments</h2>
       <section>
         <CommentForm onSubmit={handleSubmit} />
-        {comments.length > 0 && (
-          
-          
-          
+        {comments.length > 0 && ( 
           <div className="Comment-container">
-  <ul>
-    {comments.map((comment, index) => (
-      <li key={index}>
-        <div className="Comment-wrapper">
-          <span className="Comment-area">
-            {comment.text}
-            <button className="Delete-nappi" onClick={() => handleCommentDelete(index)}>
-            <img src={thrashPic} alt="Delete" /></button>
-            <div className="Timestamp">{comment.timestamp}</div>
-          </span>
-          <div className="Votes">{comment.votes}</div>
-        </div>
-        <div className="Comment-controls">
-          <button className="Upvote-nappi" onClick={() => handleVote(index, 1)}>Upvote</button>
-          <button className="Downvote-nappi" onClick={() => handleVote(index, -1)}>Downvote</button>
-          
-        </div>
-      </li>
-    ))}
-  </ul>
-</div>
-
-
-
-
-        
-
-
-
+            <ul>
+              {comments.map((comment, index) => (
+                <li key={index}>
+                  <div className="Comment-wrapper">
+                    <span className="Comment-area">
+                      {comment.text}
+                      <button className="Delete-nappi" onClick={() => handleCommentDelete(index)}>
+                      <img src={thrashPic} alt="Delete" /></button>
+                      <div className="Timestamp">{comment.timestamp}</div>
+                    </span>
+                    <div className="Votes">{comment.votes}</div>
+                  </div>
+                  <div className="Comment-controls">
+                    <button className="Upvote-nappi" onClick={() => handleVote(index, 1)}>Upvote</button>
+                    <button className="Downvote-nappi" onClick={() => handleVote(index, -1)}>Downvote</button>               
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </section>
     </div>
