@@ -106,20 +106,20 @@ nav ul li a:hover::after{
   border-radius: 10px;
   font-size: inherit;
   font-family: inherit;
-  border: 2px solid rgb(145, 145, 145);
+  border: 2px solid rgb(169, 169, 169);
   line-height: 2;
   padding: 15px;
 }
 
 .tekstikenttä:focus {
-  border-color: hsl(0, 0%, 25%);
+  border-color: rgb(125, 125, 125);
   outline: none;
 }
 
 .nappi {
   height: 103px;
   width: 100px;
-  background: rgb(145, 145, 145);
+  background: rgb(174, 174, 174);
   border: none;
   color: white;
   border-radius: 1em;
@@ -132,7 +132,7 @@ nav ul li a:hover::after{
 
 .nappi:hover,
 .nappi:focus-visible {
-  color: rgb(19, 19, 19);
+  color: rgb(125, 125, 125);
 }
 
 .Home img {
@@ -140,6 +140,7 @@ nav ul li a:hover::after{
 }
 
 .image-container {
+  margin-top: 5%;
   width: 100%;
   height: 220px;
   overflow: hidden;
@@ -147,7 +148,6 @@ nav ul li a:hover::after{
 
 .image-container img {
   width: 100%;
-
 }
 
 
