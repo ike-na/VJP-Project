@@ -1,3 +1,5 @@
+
+// Function to handle vote. It is either negative or postive
 const handleVote = (index, increment, prevComments, setComments) => {
     setComments((prevComments) => {
       const newComments = [...prevComments];
