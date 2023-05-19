@@ -2,26 +2,19 @@ import React, { useState } from "react";
 import thrashPic from "../images/delete.png"
 import { CommentForm } from "../components/Comment";
 
-const Video = () => {
+const Video = () => {       
   const [comments, setComments] = useState([]);
-
+  
   const handleSubmit = (comment) => {
     const timestamp = new Date().toLocaleString();
-    const newComment = {
-      text: comment,
-      timestamp: timestamp,
-      votes: 0,
-    };
+    const newComment = {text: comment,timestamp: timestamp,votes: 0};
     setComments([...comments, newComment]);
   };
 
-  const handleVote = (index, increment) => {
+  const handleVote = (index, increment) => {   
     setComments((prevComments) => {
       const newComments = [...prevComments];
-      newComments[index] = {
-        ...newComments[index],
-        votes: newComments[index].votes + increment,
-      };
+      newComments[index] = {...newComments[index],votes: newComments[index].votes + increment};
       return newComments;
     });
   };
