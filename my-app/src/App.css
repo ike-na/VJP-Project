@@ -209,9 +209,13 @@ ul {
 }
 
 .Votes {
-  color: red;
+  color: rgb(143, 143, 143);
   margin-left: 10px;
   margin-right: 10px;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .Comment-controls {
