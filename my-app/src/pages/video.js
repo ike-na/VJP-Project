@@ -4,7 +4,8 @@ import { CommentForm } from "../components/Comment";
 
 const Video = () => {
   const [comments, setComments] = useState([]);
-
+  
+  // submits a comment with a text and timestamp
   const handleSubmit = (comment) => {
     const timestamp = new Date().toLocaleString();
     const newComment = {
@@ -15,6 +16,7 @@ const Video = () => {
     setComments([...comments, newComment]);
   };
 
+  // adds an increment to vote counter, can be either negative or positive
   const handleVote = (index, increment) => {
     setComments((prevComments) => {
       const newComments = [...prevComments];
@@ -26,6 +28,7 @@ const Video = () => {
     });
   };
 
+  // deletes a comment
   const handleCommentDelete = (index) => {
     setComments((prevComments) => {
       const newComments = [...prevComments];
@@ -34,6 +37,7 @@ const Video = () => {
     });
   };
 
+  // returns a video and its comments and other components
   return (
     <div className="FishVideo">
       <video width="750" height="500" controls>
