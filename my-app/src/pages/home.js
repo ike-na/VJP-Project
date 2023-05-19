@@ -1,9 +1,10 @@
-import pic1 from "../images/boat.jpg";
+import pic1 from "../images/net2.jpg";
+import pic2 from "../images/boat2.jpg";
 
 const Home = () => {
   return (
     <div className="Home">
-        <img src={pic1} alt="Kuva 1" />
+        <img src={pic2} alt="Kuva 1" />
       <p>
         <span className="first-letter">M</span>eret ovat elintärkeä osa planeettaamme, mutta ne ovat vakavassa vaarassa. 
         Liikakalastus uhkaa ekosysteemejämme ja meidän kaikkien tulevaisuutta. On aika kantaa vastuu teoistamme ja ryhtyä toimiin!
