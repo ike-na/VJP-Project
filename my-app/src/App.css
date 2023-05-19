@@ -11,6 +11,7 @@
 
 .container{
   display:flex;
+  margin-left: 20px;
 }
 nav{
   font-family: 'Times New Roman', Times, serif;
@@ -27,7 +28,7 @@ nav ul li{
 nav ul li a {
   color: rgb(100, 100, 100);
   text-decoration: none;
-  font-size: 28px;
+  font-size: 45px;
   position: relative;
 }
 nav ul li a::after{
@@ -45,7 +46,7 @@ nav ul li a:hover::after{
 }
 
 .App p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.6;
   font-family: 'Times New Roman', Times, serif;
   font-weight: normal;
