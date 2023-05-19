@@ -221,14 +221,27 @@ ul {
 .Comment-controls {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
+
 .Upvote-nappi {
-  /* Add styling for the Upvote button */
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  border-color: rgb(137, 182, 130);
+  background: url("./images/arrow.png");
+  transform: rotate(180deg);
+  background-size: cover;
 }
 
 .Downvote-nappi {
-  /* Add styling for the Downvote button */
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  border-color: rgb(148, 85, 85);
+  background: url("./images/arrow.png");
+  background-size: cover;
 }
 
 .Timestamp {

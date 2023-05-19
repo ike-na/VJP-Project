@@ -56,11 +56,12 @@ const Video = () => {
                       <div className="Timestamp">{comment.timestamp}</div>
                     </span>
                     <div className="Votes">{comment.votes}</div>
+                    <div className="Comment-controls">
+                    <button className="Upvote-nappi" onClick={() => handleVote(index, 1)}></button>
+                    <button className="Downvote-nappi" onClick={() => handleVote(index, -1)}></button>               
                   </div>
-                  <div className="Comment-controls">
-                    <button className="Upvote-nappi" onClick={() => handleVote(index, 1)}>Upvote</button>
-                    <button className="Downvote-nappi" onClick={() => handleVote(index, -1)}>Downvote</button>               
                   </div>
+                  
                 </li>
               ))}
             </ul>
