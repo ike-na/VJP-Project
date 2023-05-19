@@ -1,3 +1,5 @@
+import net2 from "../images/net2.jpg";
+
 const About = () => {
   return (
     <div className="About">
@@ -20,6 +22,9 @@ const About = () => {
         <br /><br />
         Kiitos, että olet mukana taistelussa kestävän kalastuksen puolesta!
       </p>
+      <div class="image-container">
+      <img src={net2} alt="Kuva 2" />
+      </div>
 
     </div>
   );
