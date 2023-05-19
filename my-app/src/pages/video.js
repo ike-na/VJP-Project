@@ -37,7 +37,7 @@ const Video = () => {
   return (
     <div className="FishVideo">
       <video width="750" height="500" controls>
-        <source src="Liikakalastus.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/Liikakalastus.mp4'} type="video/mp4" />
       </video>
       <p>Liikakalastus paljastettuna - Kerro mielipiteesi ja tue kestävää kalastusta!</p>
       <h2 className="Comments-h2">Comments</h2>
