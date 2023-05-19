@@ -12,8 +12,8 @@ It downloads necessary nodes for the web page. Additionally make sure that you h
 
 ### `npm install react-router-dom`
 
-After that download this source code and replace files in /src and /public with the ones in this project. After this you are
-ready to run the web page locally with: 
+After that download this source code and replace files in /src and /public with the ones in this project. After this change directories to \my-app 
+and then you are ready to run the web page locally with: 
 
 ### `npm start`
 
