@@ -166,6 +166,32 @@ nav ul li a:hover::after{
   margin-bottom: 10px;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Comments {
+  resize: none;
+  height: 70px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: inherit;
+  font-family: inherit;
+  border: 2px solid rgb(169, 169, 169);
+  line-height: 2;
+  padding: 15px;
+}
+
+.Votes {
+  resize: none;
+  color: red;
+}
+
+.Timestamp {
+  resize: none;
+}
+
 .Upvote-nappi {
   height: 103px;
   width: 100px;
