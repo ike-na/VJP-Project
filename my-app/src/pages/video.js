@@ -4,7 +4,7 @@ import { CommentForm } from "../components/Comment";
 const Video = () => {
   const [comments, setComments] = useState([]);
 
-  const handleCommentSubmit = (comment) => {
+  const handleSubmit = (comment) => {
     const timestamp = new Date().toLocaleString();
     const newComment = {
       text: comment,
@@ -16,9 +16,20 @@ const Video = () => {
 
   const handleVote = (index, increment) => {
     setComments((prevComments) => {
-      const updatedComments = [...prevComments];
-      updatedComments[index].votes += increment;
-      return updatedComments;
+      const newComments = [...prevComments];
+      newComments[index] = {
+        ...newComments[index],
+        votes: newComments[index].votes + increment,
+      };
+      return newComments;
+    });
+  };
+
+  const handleCommentDelete = (index) => {
+    setComments((prevComments) => {
+      const newComments = [...prevComments];
+      newComments.splice(index, 1);
+      return newComments;
     });
   };
 
@@ -28,18 +39,19 @@ const Video = () => {
         <source src="Liikakalastus.mp4" type="video/mp4" />
       </video>
       <p>Miksi meidän tulisi välittää liikakalastuksesta?</p>
-      <h2 className="comments">Comments</h2>
+      <h2 className="Comments">Comments</h2>
       <section>
-        <CommentForm onCommentSubmit={handleCommentSubmit} />
+        <CommentForm onSubmit={handleSubmit} />
         {comments.length > 0 && (
           <ul>
-            {comments.map((comment, index) => ( 
+            {comments.map((comment, index) => (
               <li key={index}>
                 <span>{comment.text}</span>
-                <span className="vote-count">{comment.votes}</span>
-                <button onClick={() => handleVote(index, 1)}>Upvote</button>
-                <button onClick={() => handleVote(index, -1)}>Downvote</button>
-                <span className="timestamp">{comment.timestamp}</span>
+                <span className="Votes">{comment.votes}</span>
+                <button className="Upvote-nappi" onClick={() => handleVote(index, 1)}>Upvote</button>
+                <button className="Downvote-nappi" onClick={() => handleVote(index, -1)}>Downvote</button>
+                <button className="Delete-nappi" onClick={() => handleCommentDelete(index)}>Delete</button>
+                <span className="Timestamp">{comment.timestamp}</span>
               </li>
             ))}
           </ul>
