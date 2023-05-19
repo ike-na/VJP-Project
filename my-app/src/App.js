@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import Home from './pages/home.js'
 import Video from './pages/video.js'
 import About from './pages/about.js'

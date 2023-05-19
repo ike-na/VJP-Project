@@ -1,4 +1,3 @@
-import pic1 from "../images/net2.jpg";
 import pic2 from "../images/boat2.jpg";
 
 const Home = () => {
